@@ -3,6 +3,8 @@ package com.university.departmentmanagement.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 public class Department {
@@ -12,4 +14,6 @@ public class Department {
     private String title;
     private String phone;
     private String classroom;
+    private List<Subject> subjects;
+    private List<DepartmentNews> news;
 }
