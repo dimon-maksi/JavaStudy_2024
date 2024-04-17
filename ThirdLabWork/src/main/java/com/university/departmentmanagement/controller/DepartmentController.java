@@ -24,6 +24,7 @@ public class DepartmentController {
         return "departments";
     }
 
+
     @GetMapping("/{id}")
     public String departmentInfo(@PathVariable Long id, Model model) {
         Department department = departmentService.getDepartmentById(id);
@@ -40,6 +41,7 @@ public class DepartmentController {
         departmentService.addDepartment(department);
         return "redirect:/departments";
     }
+
 
     @PostMapping("/{id}")
     public String addSubjectsToDepartment(@PathVariable Long id, @RequestParam List<Long> subjectIds) {
